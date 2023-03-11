@@ -1,0 +1,331 @@
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+::-webkit-scrollbar-thumb {
+  background: #278ea5;
+  border: 0px none #ffffff;
+  border-radius: 0px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #1f4287;
+}
+::-webkit-scrollbar-thumb:active {
+  background: #1f4287;
+}
+::-webkit-scrollbar-track {
+  background: #1c2a30;
+  border: 0px none #ffffff;
+}
+/* ::-webkit-scrollbar-track:hover {
+  background: #666666;
+}
+::-webkit-scrollbar-track:active {
+  background: #333333;
+} */
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+/* General */
+body {
+  margin: 0 !important;
+  line-height: 1;
+  overflow-x: hidden !important;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  margin: 0 !important;
+  padding-left: 0 !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+p {
+  line-height: 1.2;
+  /* letter-spacing: 0.5px; */
+}
+
+button {
+  outline: none;
+  border: none;
+  box-shadow: none;
+  cursor: pointer;
+}
+
+/*
+ *  Nav
+ */
+.nav-items a {
+  padding: 15px;
+  letter-spacing: 1px;
+}
+
+/* Home - Hero */
+.slide--hero-wrapper {
+  background: linear-gradient(180deg, #071e3d, rgba(7, 30, 61, 0.4) 40%);
+  height: 100.5%;
+  max-width: unset !important;
+  top: -3px;
+}
+
+@media screen and (max-width: 576px) {
+  .slide--hero-wrapper {
+    background: linear-gradient(180deg, #071e3d, rgba(7, 30, 61, 0.4) 130%);
+  }
+  
+}
+
+/* Swiper override */
+.swiper-pagination-bullet-active {
+  background: #21e6c1 !important;
+}
+
+.swiper-pagination-bullet {
+  border-radius: 2px !important;
+  height: 3px !important;
+  width: 40px !important;
+}
+
+/*
+ *  Detail Hero
+ */
+.detail--hero {
+  background-position: 100% 0;
+  background-size: 90%;
+}
+
+.detail--heroWrapper {
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+  background: linear-gradient(
+    90deg,
+    #1c2a30 20%,
+    rgba(28, 42, 48, 0.8) 66.08%,
+    rgba(28, 42, 48, 0.5)
+  );
+}
+
+@media (max-width: 35.9375em) {
+  .detail--heroWrapper {
+    -webkit-backdrop-filter: blur(0);
+    backdrop-filter: blur(0);
+    background: linear-gradient(
+      90deg,
+      #1c2a30 20%,
+      rgba(28, 42, 48, 0.5) 66.08%,
+      rgba(28, 42, 48, 0.2)
+    );
+  }
+}
+
+@media (max-width: 85.3125em) {
+  .detail--hero {
+    background-attachment: scroll !important;
+    background-position: 100% 0;
+    background-size: 80%;
+  }
+}
+
+.torrent-btn {
+  background-image: linear-gradient(75deg, #21e6c1, #278ea5, #1f4287, #21e6c1);
+  background-position: 0;
+  background-size: 300%;
+  transition: background-position 0.3s ease-in-out;
+}
+
+/* Override MUI */
+
+.MuiCircularProgress-circle {
+  stroke: #21e6c1 !important;
+}
+
+.MuiInputLabel-root {
+  color: rgba(33, 230, 193, 0.8) !important;
+  font-family: Catamaran, sans-serif !important;
+  font-weight: 800 !important;
+  letter-spacing: 1.1px !important;
+}
+
+.MuiOutlinedInput-notchedOutline {
+  border-color: #278ea5 !important;
+}
+
+.MuiInputBase-input {
+  color: #fff !important;
+}
+
+.MuiToggleButton-root.Mui-selected {
+  background-color: #278ea5 !important;
+}
+
+.toggle-btn {
+  color: white !important;
+  text-transform: capitalize !important;
+  padding: 2.5px 10px !important;
+  border-color: #1f4287 !important;
+}
+
+/* Background util */
+
+.bg-popular {
+  background-repeat: no-repeat;
+  background-position: center 10px;
+  background-size: 100%;
+}
+
+@media screen and (max-width: 576px) {
+  .bg-popular {
+    background-position: center center;
+  }
+}
+
+.bg-upcoming {
+  background: linear-gradient(180deg, #1f4287 0%, #071e3d 100%);
+}
+
+.backdrop-grayscale {
+  -webkit-backdrop-filter: grayscale(1);
+  backdrop-filter: grayscale(1);
+}
+
+.backdrop-trailer-grayscale {
+  -webkit-backdrop-filter: grayscale(1);
+  backdrop-filter: grayscale(1);
+}
+
+.group-trailer:hover .backdrop-trailer-grayscale {
+  -webkit-backdrop-filter: grayscale(0);
+  backdrop-filter: grayscale(0);
+}
+
+.trailer-bg {
+  background-image: linear-gradient(to bottom, #1c2a30 0%, transparent 100%);
+}
+
+.keyword-bg{
+  background:  linear-gradient(1turn, rgb(223, 223, 223), #ffffff);
+}
+
+.main-overflow {
+  overflow: inherit;
+}
+
+@media screen and (max-width : 768px) {
+  .main-overflow {
+    overflow-x: hidden;
+  }
+  
+}
+
+.popular-now-shadow {
+  box-shadow: #21e6c120 0px 8px 24px;
+}
+
+.cus-box-shadow {
+  box-shadow: #21e6c120 0px 2px 8px 0px;
+}
+
+.popular-now-wrapper > * {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: all 200ms ease-in;
+}
+
+.bottom-overlay {
+  background-image: linear-gradient(
+    180deg,
+    transparent 0%,
+    transparent 65%,
+    #1c2a3070 77%,
+    #1c2a30 85%,
+    #1c2a30 100%
+  );
+}
+
+.poster-shadow {
+  box-shadow: #21e6c124 0px 3px 8px;
+}
+
+.special-text-shadow {
+  text-shadow: 1px 1px 3px #21e6c1;
+}
+
+.upcoming-title::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: #278ea5;
+  left: 0;
+  bottom: -7px;
+}
+
+.search-header {
+  background: linear-gradient(90deg, #1f4287 0%, #278ea5 100%);
+  box-shadow: #21e6c110 0px 4px 12px;
+}
+
+.paginate-wrapper button {
+  background-color: #278ea5;
+  color: white;
+  padding: 5px;
+  border-radius: 10px;
+
+  box-shadow: #21e6c120 0px 2px 8px 0px;
+  transition: all 100ms ease;
+}
+
+.paginate-wrapper button:hover {
+  background-color: #21e6c1;
+  color: #278ea5;
+}
+
+.paginate-wrapper button:disabled {
+  background-color: transparent;
+}
+
+.paginate-wrapper button > svg {
+  font-size: 1rem !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper {
+  overflow: visible !important;
+}
+
+@media (max-width: 35.9375em) {
+  .swiper-pagination-bullet {
+    width: 20px !important;
+  }
+}
+
+/* Footer */
+.footer {
+  background: linear-gradient(90deg,#071e3d,#1f4287);
+  color: #fff;
+}
