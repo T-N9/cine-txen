@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Head from "next/head";
+import { Box, Button, Container, Grid, Typography } from "@mui/material";
 import { API_KEY } from "../../constants/common";
 import { TMDB_IMG_2, TMDB_IMG_RES } from "../../constants/common";
 
@@ -23,7 +24,7 @@ const MovieDetail = ({ movie }) => {
       <Head>
         <title>{original_title}</title>
       </Head>
-      <div className="container mx-auto">
+      {/* <div className="container mx-auto">
         <div className="flex flex-col md:flex-row space-y-6 md:space-y-0">
           <div className="w-full md:w-1/3">
             <Image
@@ -56,7 +57,53 @@ const MovieDetail = ({ movie }) => {
             {imdb_id && <MovieTorrent imdb_id={imdb_id} />}
           </div>
         </div>
-      </div>
+      </div> */}
+
+      <Box sx={{ bgcolor: "background.paper", pt: 8, pb: 6 }}>
+        <Container maxWidth="lg">
+          <Grid container gap={2}>
+            <Grid item sx={{ mb: 2, position: "relative" }} xs={12} md={4}>
+              <Image
+                src={`${TMDB_IMG_2}${TMDB_IMG_RES.poster_sizes[2]}${poster_path}`}
+                alt={original_title}
+                width={300}
+                height={450}
+                quality="10"
+              />
+            </Grid>
+            <Grid item xs={12} md={6}>
+              <Box sx={{ mb: 2 }}>
+                <Typography variant="h4" gutterBottom>
+                  {original_title}
+                </Typography>
+                <Typography variant="subtitle1" color="text.secondary">
+                  Released on {new Date(release_date).toLocaleDateString()}
+                </Typography>
+                <Typography variant="h6" sx={{ mt: 1 }}>
+                  {vote_average}/10
+                </Typography>
+              </Box>
+              <Box sx={{ mb: 2 }}>
+                <Typography variant="h5" gutterBottom>
+                  Overview
+                </Typography>
+                <Typography variant="body1" gutterBottom>
+                  {overview}
+                </Typography>
+              </Box>
+              <Box>
+                <Button variant="contained" color="primary">
+                  Watch Now
+                </Button>
+
+                <Box mt={5}>
+                  {imdb_id && <MovieTorrent imdb_id={imdb_id} />}
+                </Box>
+              </Box>
+            </Grid>
+          </Grid>
+        </Container>
+      </Box>
     </>
   );
 };
