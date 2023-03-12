@@ -3,6 +3,8 @@ import Head from "next/head";
 import { API_KEY } from "../../constants/common";
 import { TMDB_IMG_2, TMDB_IMG_RES } from "../../constants/common";
 
+import MovieTorrent from "../../components/MovieTorrent";
+
 const MovieDetail = ({ movie }) => {
   const {
     poster_path,
@@ -13,12 +15,14 @@ const MovieDetail = ({ movie }) => {
     genres,
     overview,
     credits,
+    imdb_id,
   } = movie;
+
   return (
     <>
-    <Head>
-      <title>{original_title}</title>
-    </Head>
+      <Head>
+        <title>{original_title}</title>
+      </Head>
       <div className="container mx-auto">
         <div className="flex flex-col md:flex-row space-y-6 md:space-y-0">
           <div className="w-full md:w-1/3">
@@ -49,6 +53,7 @@ const MovieDetail = ({ movie }) => {
               <span>{genres.map((genre) => genre.name).join(", ")}</span>
             </div>
             <div className="text-lg font-medium">{overview}</div>
+            {imdb_id && <MovieTorrent imdb_id={imdb_id} />}
           </div>
         </div>
       </div>
