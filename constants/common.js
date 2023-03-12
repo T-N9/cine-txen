@@ -13,7 +13,8 @@ export const YTS_DOWNLOAD = `https://yts.mx/torrent/download/`;
 /*
  *  Image paths
  */
-export const TMDB_IMG = `https://image.tmdb.org/t/p/`;
+export const TMDB_IMG = `https://image.tmdb.org/t/p`;
+export const TMDB_IMG_2 = `https://www.themoviedb.org/t/p/`
 
 export const TMDB_IMG_RES = {
   backdrop_sizes: ["w300", "w780", "w1280", "original"],
