@@ -12,35 +12,6 @@ import { navItems } from "../constants/uiData";
 import { useRouter } from "next/router";
 import * as routes from "../constants/routePaths";
 
-const Hook = () => {
-  const router = useRouter();
-
-  const [navToggle, setNavToggle] = useState(false);
-
-  const handleNavActivate = (item) => {
-
-  };
-
-  const navigateToHome = () => {
-    router.push("/");
-  };
-
-  const isHome = router.asPath === routes.HOME;
-  const current = 'HOME';
-
-  return [
-    isHome,
-    current,
-    navToggle,
-
-    /* actions */
-
-    handleNavActivate,
-    navigateToHome,
-    setNavToggle,
-  ];
-};
-
 const NavBar = () => {
 
   return (
