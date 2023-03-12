@@ -60,6 +60,7 @@ const NavBar = () => {
         !isHome && "bg-dark shadow-sm shadow-secondary sticky"
       }`}
     >
+      <h1>Nav Update</h1>
       {/* Laptops view */}
       <div
         className={`lg:container md:px-4 lg:px-4 xl:px-0  hidden lg:flex justify-between items-center ${
