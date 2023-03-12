@@ -42,17 +42,6 @@ const Hook = () => {
 };
 
 const NavBar = () => {
-  const [
-    isHome,
-    current,
-    navToggle,
-
-    /* actions */
-
-    handleNavActivate,
-    navigateToHome,
-    setNavToggle,
-  ] = Hook();
 
   return (
     // <nav
