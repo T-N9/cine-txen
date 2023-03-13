@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useState } from "react";
 
 /* Images & icons */
-import { MenuRounded, CloseRounded } from "@mui/icons-material";
+// import { MenuRounded, CloseRounded } from "@mui/icons-material";
 
 /* UI Data */
 import { navItems } from "../constants/uiData";
